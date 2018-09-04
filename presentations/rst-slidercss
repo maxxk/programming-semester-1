@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# nix-shell -p python3Packages.pygraphviz -p pandoc -p nodejs --command 'cd presentations && ./make-slidercss 04-Macros-Parsing.md'
+f=`mktemp`
+input=$1
+pandoc -f rst -t revealjs  -s --template=my.slidercss --slide-level=1 -i --email-obfuscation=references -o $f $input
+node ~/Source/pandoc-slider $f > ${input%.*}.html
+rm $f
