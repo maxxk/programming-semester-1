@@ -61,6 +61,12 @@ https://unetbootin.github.io/
 
 # Hello, World!
 
+Гостевая учётная запись:
+
+Логин: student
+Пароль: mexmat
+
+
 ```c
 #include <stdio.h>
 
