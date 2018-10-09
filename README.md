@@ -3,3 +3,5 @@
 [Презентция — введение](presentations/01-Introduction.html)
 
 [Командная строка](command-line)
+
+[Заметки по языку C](c-basics)
