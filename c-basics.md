@@ -112,6 +112,9 @@ int main(void) {
     fscanf(fin, "%d", &data);
     fprintf(fout, "%d", data+1);
 
+    fclose(fin);
+    fclose(fout);
+
     return 0;
 }
 ```
