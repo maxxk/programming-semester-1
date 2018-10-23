@@ -28,14 +28,15 @@ gcc -o demo demo.c
 ### Скопировать программу в каталог преподавателя
 
 ```bash
-cp <имя исходного файла> ~/../group105/$(whoami)-$(date -Idate).c
+cp -b <имя исходного файла> ~/../group105/$(whoami)-$(date -Idate).c
 
 # Пример: исходный код demo.c
-cp demo.c ~/../group105/$(whoami)-$(date -Idate).c
+cp -b demo.c ~/../group105/$(whoami)-$(date -Idate).c
 ```
 
 Что означают символы в этой команде?
 
+- `-b` — не перезаписывать существующий файл
 - `~` — ваш домашний каталог
 - `..` — перейти на один уровень выше
 - `$(команда)` — выполнить команду в скобках и подставить её вывод вместо скобок
@@ -48,10 +49,10 @@ cp demo.c ~/../group105/$(whoami)-$(date -Idate).c
 echo <другая команда без знаков &, |, ; >
 
 # Пример:
-echo cp demo.c ~/../group105/$(whoami)-$(date -Idate).c
+echo cp -b demo.c ~/../group105/$(whoami)-$(date -Idate).c
 
 # Выведет на экран:
-cp demo.c ~/../group105/group105-2018-09-01.c
+cp -b demo.c ~/../group105/group105-2018-09-01.c
 ```
 
 ## Более подробно:
